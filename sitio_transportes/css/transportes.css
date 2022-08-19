@@ -1,0 +1,210 @@
+body {
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  /* separacion de lineas */
+}
+
+header {
+  background-color: rgb(14, 121, 221);
+  padding: 16px 0;
+}
+
+header h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 100;
+  /*le damos un espesor mas fino a la letra  */
+  font-style: italic;
+  display: inline-block;
+  position: relative;
+  bottom: 35px;
+  margin-left: 10px;
+}
+
+nav {
+
+  background-color: rgb(32, 145, 252);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+
+}
+
+nav ul li {
+  flex-grow: 1;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 3px 6px;
+  display: block;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+footer {
+  background-color: rgb(170, 177, 180);
+  clear: both;
+  color: #333;
+  text-align: center;
+  padding: 9px;
+  margin-top: 20px;
+}
+
+nav ul li a.activo {
+  /* la clase .activo va pegada a la "a" porque es el elemento a con clase activo, si los ponemos espacioados a .activo suele no funcionar la intruccion  */
+  background-color: #4c76a5;
+}
+
+.holder {
+  /* dentro de una X resolucion esta todo centrado y hay mas o menos espacio a los costados, con holder puedo controlar eso y fijarlo para ciertos anchos en funcion de la resolucion */
+  max-width: 960px;
+  /* es el holder para reso de 1024 por ejemplo  */
+  margin: 0 auto;
+  /* en base al maximo ancho distribuye el espacio alrededor sobrante  */
+
+}
+
+h2 {
+  color: #2e64a1;
+  font-weight: 400;
+
+}
+
+/* hasta aca reglas comunes de todo el sitio */
+
+/* inicio home  */
+.bienvenidos {
+  width: 75%;
+  padding-right: 10px;
+  box-sizing: border-box;
+  /* background-color: yellow; */
+}
+
+.testimonios {
+  width: 25%;
+  /* box-sizing: border-box; */
+}
+
+.columnas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bienvenidos p {
+  font-size: 20px;
+}
+
+.testimonio {
+  background-color: rgb(140, 143, 139);
+}
+
+.testimonio .cita {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  background-color: yellow;
+  display: block;
+  /* muestra en bloques y no en lineas como tiene previsto trabajar. Se mueve en bloque dentro del elemento que lo contiene */
+}
+
+.testimonio .autor {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(204, 0, 255);
+  display: block;
+  margin: 12px 0;
+}
+
+/* fin home */
+
+/* inicio nosotros */
+.historia p {
+  font-size: 12px;
+  /* el rem hereda siempre las medidas especificadas en body, 1 rem es la medida del body y en funcion de esta se ajusta el resto, por otor lado em hereda de la medida padre de donde se encuentra la propiedad */
+}
+
+.persona {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 18%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 13px;
+  /* que la caja no se agrande mas alla del border para que no pierda las medidas */
+}
+
+.personas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personas img {
+  border-radius: 50%;
+  max-width: 60%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.personas h5,
+.persona h6 {
+  margin: 0%;
+  font-weight: normal;
+  color: #2e64a1;
+}
+
+.persona p {
+  font-size: 10px;
+  color: #666;
+}
+
+/* fin nosotros */
+
+/* inicio servicios */
+.servicio {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  gap: 32px;
+  /* separa dos elementos que estan uno a continuacion del otro */
+  align-items: center;
+}
+
+.servicio .Info h4 {
+  color: #2e64a1;
+  font-weight: 500;
+  font-style: italic;
+  border-bottom: 1px solid #2e64a1;
+  padding-bottom: 10px;
+}
+.servicio .Info p {
+font-size: 13px;
+}
+
+.servicio img {
+border-radius: 13px;  
+display: block;
+max-width: 225px;
+}
+
+.servicio:nth-child(even) {
+flex-direction: row-reverse;
+  }
+
+
+
+
+/* fin servicios */
